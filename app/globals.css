@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-eb-garamond), Georgia, serif;
   font-size: 1.1rem;
@@ -35,4 +35,5 @@ body::before {
   pointer-events: none;
   background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(180, 120, 255, 0.2), transparent 50%);
   z-index: 9999;
+  mix-blend-mode: screen;
 }
