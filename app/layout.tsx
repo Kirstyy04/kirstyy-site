@@ -8,10 +8,21 @@ const ebGaramond = EB_Garamond({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Kirsten Michaela",
-  description: "A little bit of Kirsten",
-};
+export const metadata = {
+  // ...your existing metadata
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', rel: 'shortcut icon' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  appleWebApp: {
+    title: 'kirst',
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
