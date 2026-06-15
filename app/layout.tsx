@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MouseGlow from "./MouseGlow";
 import { EB_Garamond } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <MouseGlow />
         {children}
+        <Analytics />
       </body>
     </html>
   );
